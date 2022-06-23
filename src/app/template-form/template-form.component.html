@@ -7,6 +7,7 @@
       <input required email="true" #user="ngModel" [(ngModel)]="userInfo.username" name="username" type="email" placeholder=" Username" class="border border-black flex-1 w-full">
       <div *ngIf="user.touched && !user.valid">
         <span class="text-red-500" *ngIf="user.errors?.['required']">Username is required</span>
+        <span class="text-red-500" *ngIf="user.errors?.['email']">Username is invalid</span>
       </div>
     </div>
     <div class="form-group">

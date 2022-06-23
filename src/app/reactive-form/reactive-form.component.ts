@@ -17,7 +17,6 @@ export class ReactiveFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.signInForm = this.fb.group({ // Form Builder
-      ReactiveForm: this.fb.group({
         username: ['', Validators.compose([
           Validators.required,
           Validators.minLength(6),
@@ -32,7 +31,6 @@ export class ReactiveFormComponent implements OnInit {
           Validators.minLength(10),
           Validators.pattern("^[0-9]*$"),
         ]),],
-      }),
     });
   }
 
