@@ -9,12 +9,19 @@
         <span class="text-red-500" *ngIf="user.errors?.['required']">Username is required</span>
       </div>
     </div>
-    <br>
     <div class="form-group">
       <label class="mr-4">Password</label>
       <input required minlength="8" #password="ngModel" [(ngModel)]="userInfo.password" name="password" type="password" placeholder=" Password" class="Password" class="border border-black flex-1 w-full">
       <div *ngIf="password.touched && !password.valid">
         <span class="text-red-500" *ngIf="password.errors?.['required']">Password is required</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="mr-4">Phone</label>
+      <input required minlength="10" #phone="ngModel" [(ngModel)]="userInfo.phone" name="phone" type="text" pattern="[0-9]+" placeholder=" Phone" class="Phone" class="border border-black flex-1 w-full">
+      <div *ngIf="phone.touched && !phone.valid">
+        <span class="text-red-500" *ngIf="phone.errors?.['required']">Phone is required</span>
+        <span class="text-red-500" *ngIf="phone.errors?.['pattern']">Phone is invalid</span>
       </div>
     </div>
     <br>

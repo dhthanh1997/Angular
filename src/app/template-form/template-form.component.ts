@@ -11,6 +11,7 @@ export class TemplateFormComponent implements OnInit {
   userInfo = {
     username: '',
     password: '',
+    phone: '',
   }
 
   constructor() { }
