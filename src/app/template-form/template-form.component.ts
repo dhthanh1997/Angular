@@ -18,7 +18,7 @@ export class TemplateFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(form: NgForm): void {
+  onSubmit(form: NgForm) {
     console.log(form.value);
   }
 
