@@ -16,17 +16,23 @@ export class ReactiveFormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.signInForm = this.fb.group({
+    this.signInForm = this.fb.group({ // Form Builder
       username: ['', Validators.compose([
         Validators.required,
         Validators.minLength(6),
+        Validators.email,
       ]),],
-      password: ['', Validators.required],
+      password: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(4),
+      ]),],
     });
   }
 
   onSubmit(form: FormGroup) {
     console.log(form.value);
   }
+
+
 
 }

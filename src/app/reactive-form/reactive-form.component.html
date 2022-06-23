@@ -4,12 +4,12 @@
   <form class="signInForm flex flex-col" [formGroup]="signInForm" (ngSubmit)="onSubmit(signInForm)">
     <div class="form-group">
       <label class="mr-4">Username</label>
-      <input formControlName="username" type="email" placeholder=" Username" class="border border-black flex-1 invalid:border-red-500">
+      <input formControlName="username" type="email" placeholder=" Username" class="border border-black flex-1 w-full">
     </div>
     <br>
     <div class="form-group">
       <label class="mr-4">Password</label>
-      <input formControlName="password" type="password" placeholder=" Password" class="Password" class="border border-black flex-1 invalid:border-red-500">
+      <input formControlName="password" type="password" placeholder=" Password" class="Password" class="border border-black flex-1 w-full">
     </div>
     <br>
     <div class="form-group">
